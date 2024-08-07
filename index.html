@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <div class="cielo"></div>
+</head>
+<body>
+    <div class="container">
+        <img src="WhatsApp Image 2024-08-06 at 9.19.09 PM.jpeg" alt="Foto" class="photo">
+        <a href="next.html" class="next-button">SIGUIENTE</a>
+    </div>
+   
+    
+  <script>
+    const cielo = document.querySelector('.cielo');
+
+    // Crear un número mayor de estrellas para un efecto más realista
+    const numEstrellas = 800;
+
+    // Función para crear una estrella
+    function crearEstrella() {
+      const estrella = document.createElement('div');
+      estrella.classList.add('estrella');
+
+      // Posición aleatoria dentro del contenedor
+      estrella.style.left = `${Math.random() * 100}%`;
+      estrella.style.top = `${Math.random() * 100}%`;
+
+      // Tamaño aleatorio
+      const tamaño = Math.random() * 2 + 1;
+      estrella.style.width = `${tamaño}px`;
+      estrella.style.height = `${tamaño}px`;
+
+      cielo.appendChild(estrella);
+    }
+
+    // Crear todas las estrellas
+    for (let i = 0; i < numEstrellas; i++) {
+      crearEstrella();
+    }
+  </script>
+</body>
+</html>
